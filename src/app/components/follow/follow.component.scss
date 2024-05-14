@@ -1,3 +1,4 @@
+@import "../../../styles/mixins";
 .follow {
   width: 100%;
   margin-bottom: 80px;
@@ -11,12 +12,21 @@
     font-weight: 400;
     text-align: center;
     margin-bottom: 40px;
+    @include mobile {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   }
 
   &-container {
     display: flex;
     justify-content: space-evenly;
     column-gap: 10px;
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+      gap: 20px;
+    }
   }
 
   &-button {
@@ -36,6 +46,10 @@
   background: rgb(76, 31, 89);
   letter-spacing: 0.5;
   transition: 0.3s;
+  @include mobile {
+    padding: 10px;
+    width: 40%;
+  }
 
   &:hover {
     box-shadow: 0px 0px 10px 0px rgb(76, 31, 89);

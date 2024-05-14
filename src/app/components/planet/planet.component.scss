@@ -1,3 +1,4 @@
+@import "../../../styles/mixins";
 .planet {
   width: 100%;
   margin-bottom: 100px;
@@ -6,5 +7,8 @@
     width: 40%;
     margin: 0 auto;
     text-align: center;
+    @include mobile {
+      width: 90%;
+    }
   }
 }

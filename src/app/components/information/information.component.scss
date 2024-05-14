@@ -1,3 +1,5 @@
+@import "../../../styles/mixins";
+
 .information {
   width: 100%;
 
@@ -11,6 +13,9 @@
       font-weight: 500;
       padding: 15px 0px;
       text-align: center;
+      @include mobile {
+        font-size: 15px;
+      }
     }
   }
 
@@ -31,10 +36,16 @@
     &-content {
       font-size: 75px;
       letter-spacing: 1.5px;
+      @include mobile {
+        font-size: 30px;
+      }
     }
 
     &-text {
       font-size: 25px;
+      @include mobile {
+        font-size: 10px;
+      }
     }
 
     &-button {
@@ -47,6 +58,10 @@
       color: rgb(76, 31, 89);
       letter-spacing: 0.5;
       transition: 0.3s;
+      @include mobile {
+        padding: 10px 20px;
+        font-size: 10px;
+      }
 
       &:hover {
         box-shadow: 0px 0px 10px 0px #fff;

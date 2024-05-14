@@ -1,7 +1,12 @@
+@import "../../../styles/mixins";
+
 .footer {
   display: flex;
   justify-content: space-between;
   background: rgb(241, 241, 241);
+  @include mobile {
+    flex-direction: column;
+  }
 
   &-social {
     padding: 30px 30px;
@@ -23,5 +28,8 @@
     padding: 30px 100px;
     font-size: 20px;
     row-gap: 20px;
+    @include mobile {
+      padding: 30px 30px;
+    }
   }
 }

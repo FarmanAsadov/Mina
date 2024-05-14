@@ -1,3 +1,4 @@
+@import "../../../styles/mixins";
 .payment {
   width: 100%;
   margin-bottom: 100px;
@@ -12,6 +13,9 @@
       font-weight: 500;
       padding: 15px 0px;
       text-align: center;
+      @include mobile {
+        font-size: 16px;
+      }
     }
   }
 
@@ -30,6 +34,9 @@
       transform: translate(-50%, -50%);
       z-index: 1;
       letter-spacing: 1px;
+      @include mobile {
+        font-size: 40px;
+      }
     }
 
     &-image {
@@ -47,9 +54,17 @@
     display: flex;
     justify-content: center;
     column-gap: 100px;
+    @include mobile {
+      width: 100%;
+      flex-direction: column;
+      gap: 20px;
+    }
 
     &-payments {
       width: 70%;
+      @include mobile {
+        width: 100%;
+      }
 
       &-content {
         font-size: 40px;
@@ -67,6 +82,9 @@
 
     &-delivery {
       width: 70%;
+      @include mobile {
+        width: 100%;
+      }
 
       &-content {
         font-size: 40px;
@@ -79,6 +97,9 @@
         color: rgb(93, 87, 94);
         line-height: 25px;
         width: 90%;
+        @include mobile {
+          width: 100%;
+        }
       }
     }
   }

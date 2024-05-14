@@ -1,9 +1,9 @@
 <header class="header">
   <nav class="header-nav">
     <a routerLink="**" href="" class="header-nav-logo link">MINA</a>
-    <ul class="header-nav-list">
+    <ul class="header-nav-list" [style.left]="isMenuOpen ? '45%' : '100%'">
       <li class="header-nav-list-item">
-        <a class="link">
+        <a class="link" (click)="handlePopup()">
           <span class="item-text">Shop</span>
           <img
             class="item-img"
@@ -11,7 +11,10 @@
             alt="arrow-down"
           />
         </a>
-        <div class="popup">
+        <div
+          class="popup"
+          [style.visibility]="isPopupOpen ? 'inherit' : 'hidden'"
+        >
           <a
             routerLink="/all"
             routerLinkActive="active"
@@ -55,7 +58,6 @@
           >Contact</a
         >
       </li>
-
       <li class="header-nav-list-item">
         <a href="" class="link">
           <img
@@ -70,5 +72,12 @@
         </a>
       </li>
     </ul>
+
+    <img
+      (click)="handleClick()"
+      class="header-nav-menu"
+      src="../../../assets/icon/burger-menu.svg"
+      alt=""
+    />
   </nav>
 </header>

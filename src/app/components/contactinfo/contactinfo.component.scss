@@ -1,3 +1,4 @@
+@import "../../../styles/mixins";
 .contact {
   width: 100%;
   margin-bottom: 100px;
@@ -12,6 +13,9 @@
       font-weight: 500;
       padding: 15px 0px;
       text-align: center;
+      @include mobile {
+        font-size: 15px;
+      }
     }
   }
 
@@ -29,6 +33,10 @@
       transform: translate(-50%, -50%);
       z-index: 1;
       letter-spacing: 1px;
+      @include mobile {
+        font-size: 40px;
+        width: 100%;
+      }
     }
 
     &-image {

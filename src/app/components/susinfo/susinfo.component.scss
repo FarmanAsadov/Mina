@@ -1,3 +1,5 @@
+@import "../../../styles/mixins";
+
 .sustainability {
   width: 100%;
   margin-bottom: 100px;
@@ -9,6 +11,9 @@
 
     &-description {
       font-size: 20px;
+      @include mobile {
+        font-size: 15px;
+      }
       font-weight: 500;
       padding: 15px 0px;
       text-align: center;
@@ -29,6 +34,9 @@
       transform: translate(-50%, -50%);
       z-index: 1;
       letter-spacing: 1px;
+      @include  mobile {
+        font-size: 30px;
+      }
     }
 
     &-image {

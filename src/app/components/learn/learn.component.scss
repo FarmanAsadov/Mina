@@ -1,7 +1,16 @@
+@import "../../../styles/mixins";
 .learn {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 100px;
+  @include mobile {
+    flex-direction: column;
+    padding: 10px;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
 
   &-about {
     display: flex;
@@ -16,11 +25,17 @@
     &-content {
       font-size: 40px;
       font-weight: 400;
+      @include mobile {
+        font-size: 20px;
+      }
     }
 
     &-text {
       font-size: 20px;
       color: #585858;
+      @include mobile {
+        font-size: 15px;
+      }
     }
   }
 
@@ -58,6 +73,11 @@
   background: rgb(76, 31, 89);
   letter-spacing: 0.5;
   transition: 0.3s;
+
+  @include mobile {
+    padding: 15px;
+    font-size: 10px;
+  }
 
   &:hover {
     box-shadow: 0px 0px 10px 0px rgb(76, 31, 89);
